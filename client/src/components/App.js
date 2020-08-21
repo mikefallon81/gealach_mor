@@ -10,15 +10,28 @@ class App extends React.Component {
         dateOfBirth: "01/01/2010",
         petPassportNo: 123456789,
       },
+      {
+        name: "Hop",
+        kennel: "Gealachmor",
+        dateOfBirth: "01/01/2010",
+        petPassportNo: 123456789,
+      },
     ],
     selectedDog: {},
+  };
+
+  onDogSelect = (dog) => {
+    this.setState({ selectedDog: dog });
   };
 
   render() {
     return (
       <>
-        <div>App Component</div>
-        <DogList dogs={this.props.dogs} />
+        <div className="ui container">
+          {/* <Header /> */}
+          {/* <Navigation/> */}
+          <DogList onDogSelect={this.onDogSelect} dogs={this.state.dogs} />
+        </div>
       </>
     );
   }
