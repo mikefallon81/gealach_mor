@@ -1,9 +1,12 @@
 import React from "react";
+import DogItem from "./DogItem";
 
-class DogList extends React.Component {
-  render() {
-    return <div>Dog List</div>;
-  }
-}
+const DogList = ({ dogs, onDogSelect }) => {
+  const renderedList = dogs.map((dog) => {
+    return <DogItem key={dog.name} dog={dog} onDogSelect={onDogSelect} />;
+  });
+
+  return <div>{renderedList}</div>;
+};
 
 export default DogList;
