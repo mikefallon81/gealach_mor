@@ -1,13 +1,17 @@
 import React from "react";
+import "./DogItem.css";
 
 const DogItem = ({ dog, onDogSelect }) => {
+  console.log(dog.image);
   return (
-    <div onClick={() => onDogSelect(dog)} className="ui card">
-      <div className="image">
-        <img alt="" src="" />
-      </div>
-      <div className="content">
-        <h3 className="header">{dog.name}</h3>
+    <div className="card_container">
+      <div onClick={() => onDogSelect(dog)} className="ui card">
+        <div className="image">
+          <img alt="" src={require("../images/updated_logo.png")} />
+        </div>
+        <div className="content">
+          <h3 className="header">{dog.name}</h3>
+        </div>
       </div>
     </div>
   );
