@@ -1,0 +1,6 @@
+.renderedList {
+    display: flex !important;
+    flex-wrap: wrap;
+    cursor: pointer;
+    /* margin: 10px; */
+}
